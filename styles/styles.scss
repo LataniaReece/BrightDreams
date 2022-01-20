@@ -1,0 +1,31 @@
+$primary-color: #fe646f;
+// $primary-color: #f9966d;
+$primary-color-faded: #f9976db2;
+$light-primary-color: #435f86;
+$secondary-color: #978ecb;
+// $secondary-color: #64b9ab;
+// $secondary-color: #2a324b;
+$light-secondary-color: #b6a7ca7a;
+$tertiary-color: #ff9b71;
+// $tertiary-color: #ff9770;
+$lighter-tertiary-color: #ffb392;
+
+$white-text: rgb(253, 253, 253);
+$primary-text-color: #333;
+$dark-primary-text-color: rgb(19, 19, 19);
+$darker-primary-text-color: #52545f;
+$even-darker-primary-text-color: #373841;
+$light-primary-text-color: rgb(139, 139, 139);
+$secondary-text-color: #aa394e;
+
+$primary-background-color: rgb(240, 240, 240);
+
+$header-height: 5rem;
+
+@import '_general';
+@import 'navbar';
+@import '_showcase-section';
+@import '_cta-wrapper';
+@import '_features';
+@import 'about';
+@import 'footer';

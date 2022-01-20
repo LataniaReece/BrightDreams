@@ -1,0 +1,223 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .navbar {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+    position: relative;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      transition: opacity 0.2s ease-in;
+
+      img {
+        width: 30px;
+        margin-right: 0.4rem;
+      }
+      span {
+        color: $primary-color;
+        font-weight: 800;
+        margin-right: 0.3rem;
+      }
+    }
+
+    .nav-links {
+      position: absolute;
+      top: $header-height;
+      right: 0px;
+      width: 100%;
+      background-color: $secondary-color;
+      transform: translateX(120%);
+      transition: transform 0.5s ease-in;
+      padding: 2rem;
+
+      .nav-link {
+        opacity: 0;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+      }
+
+      a {
+        font-size: 1.125rem;
+        align-items: center;
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.45rem 1rem;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.95rem;
+        font-weight: 400;
+        img {
+          width: 20px;
+          margin-right: 0.5rem;
+          background-color: white;
+          border-radius: 50%;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+    .show {
+      transform: translateX(0%);
+    }
+    .arrow {
+      display: block;
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      top: -5.5px;
+      left: 32px;
+      background-color: $secondary-color;
+      transform: rotate(45deg);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .small-nav-button {
+      font-weight: 400;
+
+      i {
+        margin-left: 0.4rem;
+        color: $primary-text-color;
+      }
+      ul {
+        list-style: none;
+      }
+      .nav-link {
+        a {
+          text-decoration: none;
+          color: $primary-text-color;
+          font-size: 1.2rem;
+        }
+        &:hover {
+          opacity: 0.55;
+          background-color: transparent;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .navbar {
+      opacity: 0;
+      animation: navFadeIn 0.9s ease-in forwards;
+      .nav-links {
+        transform: translateX(0);
+        position: relative;
+        right: 0;
+        top: 0;
+        width: auto;
+        padding: 0;
+        background-color: transparent;
+
+        ul {
+          flex-direction: row;
+        }
+
+        .nav-link {
+          display: inline-block;
+          transition: 0.2s;
+          opacity: 1;
+          a {
+            padding: 0 1rem;
+            margin-top: 0;
+            color: $primary-text-color;
+            font-size: 0.95rem;
+            align-items: center;
+            display: inline-block;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+              transform: translateY(-3px);
+              color: $primary-color;
+            }
+          }
+        }
+      }
+
+      .small-nav-button {
+        display: none;
+      }
+      .arrow {
+        display: none;
+      }
+    }
+
+    .nav-link:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .nav-link:first-child:hover ~ .arrow {
+      background-color: var(--secondary-color);
+    }
+  }
+}
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes caretRotateUp {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes caretRotateDown {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
