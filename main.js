@@ -1,3 +1,15 @@
+// REset to top of page before refreshing/loading
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+  document.body.style.opacity = '0';
+};
+
+// Preloader
+const loader = document.getElementById('preloader');
+window.addEventListener('load', () => {
+  loader.style.display = 'none';
+});
+
 const smallNavButtonEl = document.querySelector('.small-nav-button');
 const smallNavButtonIconEl = document.querySelector('.small-nav-button i');
 const navLinksEl = document.querySelector('.nav-links');
