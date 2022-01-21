@@ -20,7 +20,14 @@
       opacity: 0;
       animation: mobileShowcaseTextAnimation 0.7s ease-in 1.5s forwards;
       h1 {
-        font-size: 2.75rem;
+        font-size: 2.2rem;
+        text-shadow: 2px 2px #ffffff17;
+        color: transparent;
+        background-image: linear-gradient(to left, #db506e, #897ec5, #b96678);
+        -webkit-background-clip: text;
+        animation: showcaseHeaderAnimation 6s linear infinite;
+        -webkit-background-size: 500%;
+        background-size: 500%;
       }
 
       .subtitle {
@@ -98,11 +105,9 @@
         bottom: 15%;
         left: 3%;
         opacity: 0;
-        transform: translateX(7%);
-        animation: showcaseTextAnimation 0.7s ease-in 1.5s forwards;
+
         h1 {
-          width: 50%;
-          font-size: 2.4rem;
+          font-size: 2.7rem;
         }
         .subtitle {
           width: 45%;
@@ -142,24 +147,10 @@
         max-width: 1500px;
 
         h1 {
-          font-size: 3rem;
+          font-size: 3.5rem;
           font-weight: 600;
-          width: 30%;
 
           min-width: 400px;
-
-          span {
-            animation: BlurFadeIn 0.35s ease-in backwards;
-            color: transparent;
-            text-shadow: 0px 0px 1px #fff;
-
-            &:nth-child(2) {
-              animation-delay: 0.5s;
-            }
-            &:nth-child(3) {
-              animation-delay: 0.8s;
-            }
-          }
         }
         .subtitle {
           font-size: 0.95rem;
@@ -170,6 +161,18 @@
         }
       }
     }
+  }
+}
+
+@keyframes showcaseHeaderAnimation {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
   }
 }
 
