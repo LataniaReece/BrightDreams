@@ -1,14 +1,13 @@
 .features-section {
   margin-top: 2.5rem;
   color: $primary-text-color;
+  opacity: 0;
+  animation: fadeInAnimation 0.7s ease-in-out 1.2s forwards;
 
   h2 {
     text-align: center;
     font-size: 1.95rem;
     font-weight: 400;
-
-    opacity: 0;
-    animation: headerTextAnimation 0.7s ease-in-out 2.7s forwards;
 
     span {
       color: $primary-color;

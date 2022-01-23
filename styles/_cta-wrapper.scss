@@ -51,15 +51,6 @@
     }
   }
 }
-[data-aos='fade-cta-in'] {
-  transform: scale(0.2);
-  opacity: 0;
-  transition-property: transform, opacity;
-  &.aos-animate {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 @media screen and (min-width: 768px) {
   .cta-wrapper {
     flex-direction: row;
@@ -76,16 +67,6 @@
 
     .btn {
       padding: 0.75rem 1.2rem;
-    }
-  }
-
-  [data-aos='fade-cta-in'] {
-    transform: skewX(45deg);
-    opacity: 0;
-    transition-property: transform, opacity;
-    &.aos-animate {
-      transform: skewX(0);
-      opacity: 1;
     }
   }
 }

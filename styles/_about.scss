@@ -78,16 +78,6 @@
   }
 }
 
-[data-aos='mobileAboutAnimation'] {
-  transform: translateX(25%);
-  opacity: 0;
-  transition-property: transform, opacity;
-  &.aos-animate {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
 @media screen and (min-width: 375px) {
   .about-section {
     h2 {
@@ -136,16 +126,6 @@
   .about-section {
     h2 {
       font-size: 2.5rem;
-      opacity: 0;
-    }
-    [data-aos='headerTextAnimation'] {
-      transform: scale(0);
-      opacity: 0;
-      transition-property: transform, opacity;
-      &.aos-animate {
-        transform: scale(1);
-        opacity: 1;
-      }
     }
 
     &::before {
@@ -168,7 +148,7 @@
       padding: 0 7rem;
     }
     [data-aos='teamSlideAnimation'] {
-      transform: translateX(50%) scale(0.5);
+      transform: translateX(25%) scale(0.5);
       opacity: 0;
       transition-property: transform, opacity;
       &.aos-animate {

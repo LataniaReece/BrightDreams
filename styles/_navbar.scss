@@ -13,6 +13,8 @@ header {
     align-items: center;
     height: $header-height;
     position: relative;
+    opacity: 0;
+    animation: navFadeIn 0.9s ease-in forwards;
 
     .logo {
       display: flex;
@@ -130,8 +132,6 @@ header {
 @media screen and (min-width: 768px) {
   header {
     .navbar {
-      opacity: 0;
-      animation: navFadeIn 0.9s ease-in forwards;
       .nav-links {
         transform: translateX(0);
         position: relative;
@@ -192,7 +192,6 @@ header {
     opacity: 1;
   }
 }
-
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -203,7 +202,6 @@ header {
     transform: translateX(0px);
   }
 }
-
 @keyframes caretRotateUp {
   from {
     transform: rotate(0deg);
